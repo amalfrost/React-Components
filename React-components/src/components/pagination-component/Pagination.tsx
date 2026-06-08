@@ -6,7 +6,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     console.log(totalPagesCount)
     const btnStyles = ''
     return (
-        <div>
+        <div className=' flex gap-2.5 relative left-[30%] bottom-1 w-fit mt-2 ' >
 
             <button
                 disabled={currentPage === 1}

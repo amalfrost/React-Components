@@ -2,20 +2,20 @@ import React from 'react'
 import Pagination from './Pagination';
 import { usePagination } from './usePagination';
 
-const PaginationView = () => {
-    const users = Array.from(
-        { length: 50 },
-        (_, i) => ({
-            id: i + 1,
-            name: `User ${i + 1}`,
-        })
-    );
+const PaginationView = ({ data, renderItem }) => {
+    // const users = Array.from(
+    //     { length: 50 },
+    //     (_, i) => ({
+    //         id: i + 1,
+    //         name: `User ${i + 1}`,
+    //     })
+    // );
     const { currentPage,
         totalPages,
         currentData,
         gotoPage,
         nextPage,
-        prevPage } = usePagination(users, 10)
+        prevPage } = usePagination(data, 10)
 
     return (
         <div>
